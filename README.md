@@ -4,7 +4,7 @@ This is a **work in progress** set of files that make Ember sites SEO friendly b
 
 * implementing hashbang urls in your Ember app
 * providing a rake task that crawls your site and takes a static snapshot
-* serving the correct static files to Google by properly handling requests with "_escaped_fragment_"
+* serving the correct static files to Google by properly handling requests with `_escaped_fragment_`
 
 ### Usage
 
@@ -20,7 +20,7 @@ Run:
 rake scrape
 ```
 
-This takes a snapshot of your site and saves it to public/static
+This takes a snapshot of your site and saves it to `public/static`
 
 Now visit a url in your app, for example:
 
