@@ -1,6 +1,13 @@
 ## Ember SEO
 
-**Note: this gem is currently a work in progress.**
+**Status**
+
+This gem successfully creates a snapshot of your site on your local server and properly serves it up with escaped fragement. However, I am unsure if the escaped fragment pattern is exactly correct and if this will actually work with Google.
+
+Additionally, hashbang urls are really ugly, so I'd like for the router to determine if the request is from a Google bot and only then use hashbangs.
+
+
+**Introduction**
 
 This gem helps make Ember sites SEO friendly by:
 
@@ -15,13 +22,12 @@ This gem helps make Ember sites SEO friendly by:
 Add it to your Gemfile:
 
 `gem 'ember-seo'`
-`bundle`
 
 Run the generator:
 
 `rails g ember_seo:install`
 
-This creates rails routes and a controller to display your static site.
+This creates Rails routes, a Rails controller to display your static site, and app/models/location.js which has a hashbang location helper.
 
 
 #### Setup
@@ -34,7 +40,7 @@ var Router = Ember.Router.extend({
 });
 ```
 
-Set the starting paths for the crawler in your environment file.
+Set the starting paths for the crawler in your environment file:
 
 ```
 config.ember_seo_starting_paths = ['/', '/posts', '/etc']
@@ -42,7 +48,7 @@ config.ember_seo_starting_paths = ['/', '/posts', '/etc']
 
 ## Usage
 
-Run the crawler:
+Make sure your server is running on localhost:3000 then run the crawler:
 
 ```
 rake emberseo:scrape
