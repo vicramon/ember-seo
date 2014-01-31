@@ -1,3 +1,3 @@
-gem 'capybara'
-gem 'coffee-rails'
-gem 'poltergeist'
+source 'https://rubygems.org'
+
+gemspec

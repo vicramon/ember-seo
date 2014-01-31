@@ -1,3 +1,5 @@
-task scrape: :environment do
-  SiteCrawler.new(['/starting/path/1', '/starting/path/2']).start_crawl
+namespace :emberseo do
+  task scrape: :environment do
+    SiteCrawler.new(Rails.config.ember_seo_starting_paths).start_crawl
+  end
 end
