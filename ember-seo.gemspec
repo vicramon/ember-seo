@@ -1,6 +1,5 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
+$:.push File.expand_path("../lib", __FILE__)
+
 
 Gem::Specification.new do |s|
   s.name = "ember-seo"
@@ -23,7 +22,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency("capybara")
   s.add_development_dependency("poltergeist")
 
-  s.files = Dir.glob("lib/**/*") + %w(README.md)
-  s.require_path = "lib"
+  s.files = Dir["{app,config,db,lib,vendor}/**/*", "LICENSE", "README.md"]
 
 end
