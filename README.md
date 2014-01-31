@@ -27,7 +27,7 @@ Run the generator:
 
 `rails g ember_seo:install`
 
-This creates Rails routes, a Rails controller to display your static site, and app/models/location.js which has a hashbang location helper.
+This creates Rails routes, a Rails controller to display your static site, and app/models/hashbang.js which has a hashbang location helper. If you're not using Ember Appkit Rails then you should move hashbang.js to app/assets/javascripts/models.
 
 
 #### Setup

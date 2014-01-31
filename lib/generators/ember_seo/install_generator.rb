@@ -9,7 +9,7 @@ module EmberSeo
 
       def generate
         copy_file "../templates/static_controller.rb", "app/controllers/static_controller.rb"
-        copy_file "../templates/location.js", "app/models/location.js"
+        copy_file "../templates/hashbang.js", "app/models/hashbang.js"
         copy_file "../templates/static_constraint.rb", "lib/constraints/static_constraint.rb"
 
         inject_into_file 'config/routes.rb', after: "routes.draw do\n" do
