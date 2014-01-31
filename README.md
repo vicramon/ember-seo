@@ -51,7 +51,7 @@ config.ember_seo_starting_paths = ['/', '/posts', '/etc']
 Make sure your server is running on localhost:3000 then run the crawler:
 
 ```
-rake emberseo:scrape
+rake ember_seo:scrape
 ```
 
 This takes a snapshot of your site and saves it to public/static.
