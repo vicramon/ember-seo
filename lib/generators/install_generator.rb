@@ -11,7 +11,7 @@ module EmberSeo
       def generate
         template "../templates/static_controller.rb", "app/controllers/static_controller.rb"
         template "../templates/location.js", "app/models/location.js"
-        template "../templates/static_constraint.rb", "lib/constraints/static_constraint.rb"
+        template "../templates/static.rb", "lib/constraint/static.rb"
 
         inject_into_file 'config/routes.rb', after: "routes.draw do" do <<-'RUBY'
           get '/', to: 'static#show', constraints: Constraint::Static.new

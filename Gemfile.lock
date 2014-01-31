@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     ember-seo (0.1)
+      capybara
+      poltergeist
 
 GEM
   remote: https://rubygems.org/
@@ -51,9 +53,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
   ember-seo!
-  poltergeist
   pry
   rake
   rspec

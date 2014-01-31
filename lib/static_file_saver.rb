@@ -25,7 +25,7 @@ class StaticFileSaver
 
   def static_file_path_for(path)
     file_name = path.gsub("#!",'')
-    file_name << 'index' if path.last == '/'
+    file_name << 'index' if path[path.length-1] == '/'
     "public/static" + file_name
   end
 

@@ -11,11 +11,15 @@ This gem helps make Ember sites SEO friendly by:
 ### Installation
 
 #### Bundle & Install
+
 Add it to your Gemfile:
 
 `gem 'ember-seo'`
+`bundle`
 
-`rails g emberseo:install`
+Run the generator:
+
+`rails g ember_seo:install`
 
 This creates rails routes and a controller to display your static site.
 
@@ -25,7 +29,7 @@ This creates rails routes and a controller to display your static site.
 Modify your Ember router to use hashbang:
 
 ```
-App.Router.reopen({
+var Router = Ember.Router.extend({
   location: 'hashbang'
 });
 ```

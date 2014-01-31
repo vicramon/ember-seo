@@ -1,7 +1,9 @@
+require 'static_file_saver'
+require 'capybara/dsl'
+require 'capybara/poltergeist'
+
 class SiteCrawler
-  require 'capybara/poltergeist'
-  require 'capybara/dsl'
-  include Capybara::DSL
+  include ::Capybara::DSL
 
   attr_accessor :start_paths, :saved_paths, :queued_paths, :current_path, :current_path_bang
 
